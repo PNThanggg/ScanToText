@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.Log
 import androidx.multidex.MultiDex
 import androidx.multidex.MultiDexApplication
+import com.hoicham.orc.core.utils.SharePrefUtils
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
@@ -22,5 +23,7 @@ class MyApplication : MultiDexApplication() {
         super.onCreate()
 
         Log.d(TAG, "onCreate()")
+
+        SharePrefUtils.init(this)
     }
 }
