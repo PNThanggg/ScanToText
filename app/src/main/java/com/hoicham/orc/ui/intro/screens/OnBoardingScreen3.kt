@@ -11,6 +11,7 @@ import com.hoicham.orc.databinding.FragmentOnBoardingScreen3Binding
 class OnBoardingScreen3 : Fragment(R.layout.fragment_on_boarding_screen3) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         val binding = FragmentOnBoardingScreen3Binding.bind(view)
 
         val viewPager = requireActivity().findViewById<ViewPager2>(R.id.view_pager)

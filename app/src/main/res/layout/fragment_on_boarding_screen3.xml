@@ -25,11 +25,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:padding="4dp"
-        app:lottie_rawRes="@raw/create_pdf_loading"
-        app:lottie_autoPlay="true"
-        app:layout_constraintTop_toBottomOf="@id/guideline8"
         app:layout_constraintBottom_toTopOf="@id/guideline9"
-        />
+        app:layout_constraintTop_toBottomOf="@id/guideline8"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/create_pdf_loading" />
 
     <TextView
         android:id="@+id/tv_info1"
@@ -38,8 +37,8 @@
         android:layout_marginHorizontal="16dp"
         android:fontFamily="@font/noto_sans_jp_regular"
         android:gravity="center"
-        android:textSize="16sp"
         android:text="@string/export_your_scans_and_edits_in_pdf_format"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/guideline7"
         app:layout_constraintTop_toBottomOf="@id/guideline9" />
 
