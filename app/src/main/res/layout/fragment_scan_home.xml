@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    android:background="@color/background"
+    android:clipToPadding="false">
 
     <androidx.compose.ui.platform.ComposeView
         android:id="@+id/compose_view_snack_bar"
@@ -15,12 +16,12 @@
         android:id="@+id/card_view_loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="4dp"
         android:translationX="-300dp"
         app:cardBackgroundColor="@color/background"
         app:cardCornerRadius="14dp"
         app:cardElevation="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/compose_view_snack_bar"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:strokeColor="@color/loading_outline"
@@ -122,4 +123,5 @@
         app:srcCompat="@drawable/ic_round_camera_alt_24"
         app:tint="@color/heavy_blue"
         tools:ignore="SpeakableTextPresentCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
