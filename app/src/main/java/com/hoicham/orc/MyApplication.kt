@@ -1,11 +1,11 @@
 package com.hoicham.orc
 
 import android.content.Context
-import android.util.Log
 import androidx.multidex.MultiDex
 import androidx.multidex.MultiDexApplication
 import com.hoicham.orc.core.utils.SharePrefUtils
 import dagger.hilt.android.HiltAndroidApp
+import timber.log.Timber
 
 @HiltAndroidApp
 class MyApplication : MultiDexApplication() {
@@ -22,7 +22,7 @@ class MyApplication : MultiDexApplication() {
     override fun onCreate() {
         super.onCreate()
 
-        Log.d(TAG, "onCreate()")
+        Timber.tag(TAG).d("onCreate()")
 
         SharePrefUtils.init(this)
     }
