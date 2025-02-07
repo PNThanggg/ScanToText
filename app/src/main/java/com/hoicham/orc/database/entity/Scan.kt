@@ -1,4 +1,4 @@
-package com.hoicham.orc.models
+package com.hoicham.orc.database.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
