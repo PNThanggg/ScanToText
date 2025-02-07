@@ -8,12 +8,14 @@ import com.hoicham.orc.R
 import com.hoicham.orc.databinding.FragmentViewPagerBinding
 import com.hoicham.orc.ui.intro.screens.OnBoardingScreen1
 import com.hoicham.orc.ui.intro.screens.OnBoardingScreen2
+import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * A simple [Fragment] subclass.
  * Use the [ViewPagerFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+@AndroidEntryPoint
 class ViewPagerFragment : Fragment(R.layout.fragment_view_pager) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
