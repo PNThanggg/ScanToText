@@ -58,6 +58,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
 
+    // Datastore
     implementation(libs.androidx.datastore.core)
     implementation(libs.androidx.datastore.preferences)
 
@@ -66,17 +67,19 @@ dependencies {
     implementation(libs.bundles.navigation)
     implementation(libs.bundles.lifecycle)
     implementation(libs.bundles.text.recognition)
-    implementation(libs.entity.extraction)
 
     implementation(libs.kotlinx.coroutines.play.services)
 
     implementation(libs.lottie)
     implementation(libs.timber)
     implementation(libs.multidex)
+    implementation(libs.entity.extraction)
 
+    // Hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
 
+    // Room
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     ksp(libs.room.compiler)
