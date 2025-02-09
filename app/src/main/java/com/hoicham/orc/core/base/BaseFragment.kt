@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 import com.hoicham.orc.core.extension.handleBackPressed
 
-abstract class BaseFragment<VB : ViewBinding> : Fragment(), IBaseView {
+abstract class BaseFragment<VB : ViewBinding> : Fragment(), IBaseFragment {
     private var _binding: VB? = null
     val binding: VB get() = _binding!!
 
@@ -29,7 +29,7 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment(), IBaseView {
             return@handleBackPressed
         }
 
-        initView(savedInstanceState)
+        initView(view, savedInstanceState)
 
         initData()
 

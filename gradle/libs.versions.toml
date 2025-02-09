@@ -14,6 +14,7 @@ recyclerview = "1.4.0"
 composeBom = "2025.01.01"
 
 androidx-data-store = "1.1.2"
+core-splash-screen = "1.0.1"
 
 kotlinx-serialization-json = "1.7.3"
 
@@ -53,6 +54,10 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 
 androidx-datastore-core = { group = "androidx.datastore", name = "datastore-core", version.ref = "androidx-data-store" }
 androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "androidx-data-store" }
+androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "core-splash-screen" }
+
+koin-core = { group = "io.insert-koin", name = "koin-core", version = "3.3.2" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version = "3.3.2" }
 
 navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
 navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
@@ -83,6 +88,8 @@ kotlinx-coroutines-play-services = { group = "org.jetbrains.kotlinx", name = "ko
 lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
 timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
 multidex = { group = "androidx.multidex", name = "multidex", version.ref = "multidex" }
+
+image-cropper = { group = "com.vanniktech", name = "android-image-cropper", version = "4.5.0" }
 
 [bundles]
 navigation = [

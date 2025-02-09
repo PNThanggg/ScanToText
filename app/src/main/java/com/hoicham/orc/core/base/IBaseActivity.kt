@@ -2,7 +2,7 @@ package com.hoicham.orc.core.base
 
 import android.os.Bundle
 
-interface IBaseView {
+interface IBaseActivity {
     fun initView(savedInstanceState: Bundle?)
 
     fun initData()

@@ -52,9 +52,9 @@ class HomeViewModel @Inject constructor(
         val hasSeen = it.firstLaunch
         if (it.scanCount % 12 == 0 && hasSeen) {
             _events.send(HomeEvents.ShowSupportDialog)
-            prefs.updateApplicationPreferences {
-                it.copy(
-                    scanCount = it.scanCount + 1
+            prefs.updateApplicationPreferences { preferences ->
+                preferences.copy(
+                    scanCount = preferences.scanCount + 1
                 )
             }
         }
@@ -97,7 +97,7 @@ class HomeViewModel @Inject constructor(
                         content = extractedModel.content
                     )
                     filteredTextModelRepo.insertModel(model)
-                    Timber.tag("DEBUGn").d("createScan: model inserted %s", model.content)
+                    Timber.tag("DEBUG").d("createScan: model inserted %s", model.content)
                 }
 
                 if (homeFragActive) {
@@ -152,7 +152,7 @@ class HomeViewModel @Inject constructor(
                 createScan(completeText, extractedEntitiesResult)
             }
             completeTextResult.onFailure {
-                Timber.tag("DEBUGn").e("Error: %s", it.localizedMessage)
+                Timber.tag("DEBUG").e("Error: %s", it.localizedMessage)
                 _events.send(HomeEvents.ShowErrorWhenScanning)
             }
         }

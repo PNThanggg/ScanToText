@@ -14,7 +14,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(), IBaseView {
+abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity(), IBaseActivity {
     // region variable
     companion object {
         private const val TIME_DELAY_CLICK = 200L

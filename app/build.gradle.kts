@@ -61,6 +61,12 @@ dependencies {
     // Datastore
     implementation(libs.androidx.datastore.core)
     implementation(libs.androidx.datastore.preferences)
+    implementation(libs.androidx.core.splashscreen)
+
+    // Koin core features
+    implementation(libs.koin.core)
+    // Koin main features for Android (Scope,ViewModel ...)
+    implementation(libs.koin.android)
 
     implementation(libs.kotlinx.serialization.json)
 
@@ -74,6 +80,7 @@ dependencies {
     implementation(libs.timber)
     implementation(libs.multidex)
     implementation(libs.entity.extraction)
+    implementation(libs.image.cropper)
 
     // Hilt
     implementation(libs.hilt.android)
