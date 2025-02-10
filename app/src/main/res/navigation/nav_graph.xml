@@ -23,8 +23,35 @@
         android:name="com.hoicham.orc.ui.intro.ViewPagerFragment"
         android:label="fragment_view_pager"
         tools:layout="@layout/fragment_view_pager" />
+
     <dialog
         android:id="@+id/supportFragment"
         android:name="com.hoicham.orc.ui.support.SupportFragment"
         android:label="SupportFragment" />
+
+    <fragment
+        android:id="@+id/detailScanFragment"
+        android:name="com.hoicham.orc.ui.detail_scan.DetailScanFragment"
+        android:label="DetailScanFragment">
+
+        <action
+            android:id="@+id/to_pdfDialogFragment"
+            app:destination="@id/pdfDialogFragment" />
+        <argument
+            android:name="scan_id"
+            app:argType="integer" />
+        <argument
+            android:name="is_created"
+            app:argType="integer" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/pdfDialogFragment"
+        android:name="com.hoicham.orc.ui.pdf_dialog.PdfDialogFragment"
+        android:label="PdfDialogFragment">
+
+        <argument
+            android:name="pdf_scan_id"
+            app:argType="integer" />
+    </dialog>
 </navigation>
