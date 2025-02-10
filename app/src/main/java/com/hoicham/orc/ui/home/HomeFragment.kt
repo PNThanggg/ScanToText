@@ -150,7 +150,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                 }
 
                 is HomeEvents.ShowSupportDialog -> {
-//                    findNavController().navigate(R.id.action_homeScanFragment_to_supportFragment)
+                    findNavController().navigate(R.id.action_homeFragment_to_supportFragment)
                 }
             }
         }

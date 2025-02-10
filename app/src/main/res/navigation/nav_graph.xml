@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_viewPagerFragment"
             app:destination="@id/viewPagerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_supportFragment"
+            app:destination="@id/supportFragment" />
     </fragment>
 
     <fragment
@@ -20,4 +23,8 @@
         android:name="com.hoicham.orc.ui.intro.ViewPagerFragment"
         android:label="fragment_view_pager"
         tools:layout="@layout/fragment_view_pager" />
+    <dialog
+        android:id="@+id/supportFragment"
+        android:name="com.hoicham.orc.ui.support.SupportFragment"
+        android:label="SupportFragment" />
 </navigation>

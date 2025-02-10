@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.navigation.safeargs)
     alias(libs.plugins.dagger.hilt)
@@ -40,7 +41,13 @@ android {
 
     buildFeatures {
         viewBinding = true
+        compose = true
     }
+}
+
+composeCompiler {
+    reportsDestination = layout.buildDirectory.dir("compose_compiler")
+    stabilityConfigurationFile = rootProject.layout.projectDirectory.file("stability_config.conf")
 }
 
 dependencies {
@@ -54,6 +61,7 @@ dependencies {
     // Compose
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.text.google.fonts)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
@@ -80,6 +88,8 @@ dependencies {
     implementation(libs.timber)
     implementation(libs.multidex)
     implementation(libs.entity.extraction)
+    implementation(libs.line.awesome)
+    implementation(libs.tabler.icons)
     implementation(libs.image.cropper)
 
     // Hilt
